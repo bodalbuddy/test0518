@@ -1,0 +1,13 @@
+<h1>word count</h1>
+<form action="./words?url={{url}}" method="get">
+    <p>{{article}}</p>
+</form>
+
+<br>
+<h2>result</h2>
+<div>{{words}}</div>
+<ol>
+{% for k, v in words %}
+    <li>{{k}}:{{v}}</li>
+{% endfor %}
+</ol>
