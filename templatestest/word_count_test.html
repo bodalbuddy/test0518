@@ -1,0 +1,14 @@
+<h1>word count</h1>
+<form action="./words?url={{url}}" method="get">
+    <p><textarea name="lyrics" cols="100" rows="10"></textarea></p>
+    <p><input type="submit"></p>
+</form>
+
+<br>
+<h2>result</h2>
+<div>{{words}}</div>
+<ul>
+{% for k, v in words %}
+    <li>{{k}}:{{v}}</li>
+{% endfor %}
+</ul>

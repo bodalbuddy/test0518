@@ -1,0 +1,14 @@
+<h1>다음 뉴스 추출</h1>
+<form action="/news/ranking" method="post">
+    <input type="text" name="day" placeholder="yyyymmdd">
+    <input type="submit">
+</form>
+
+<hr>
+
+<h2>오늘의 뉴스</h2>
+<ol>
+{% for s in soup %}
+   <p><li><a href="./words?url={{ s['link'] }}">{{ s['title'] }}</a></li></p>
+{% endfor %}
+</ol>
